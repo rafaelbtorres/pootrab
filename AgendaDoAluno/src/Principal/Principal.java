@@ -28,8 +28,8 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         setSize(998, 770);
         this.setLocationRelativeTo(null);
-//        iniCalendario();
-//        setarDias();
+        iniCalendario();
+        setarDias();
 
     }
 
@@ -43,6 +43,59 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jLayeredPane2 = new javax.swing.JLayeredPane();
+        jSpinner1 = new javax.swing.JSpinner();
+        lSem1 = new javax.swing.JLabel();
+        lSem2 = new javax.swing.JLabel();
+        lSem4 = new javax.swing.JLabel();
+        lSem5 = new javax.swing.JLabel();
+        lSem6 = new javax.swing.JLabel();
+        lSem7 = new javax.swing.JLabel();
+        lSem3 = new javax.swing.JLabel();
+        SelecaoMes = new javax.swing.JComboBox<>();
+        d1 = new javax.swing.JLabel();
+        d2 = new javax.swing.JLabel();
+        d3 = new javax.swing.JLabel();
+        d4 = new javax.swing.JLabel();
+        d5 = new javax.swing.JLabel();
+        d6 = new javax.swing.JLabel();
+        d9 = new javax.swing.JLabel();
+        d10 = new javax.swing.JLabel();
+        d11 = new javax.swing.JLabel();
+        d12 = new javax.swing.JLabel();
+        d13 = new javax.swing.JLabel();
+        d16 = new javax.swing.JLabel();
+        d23 = new javax.swing.JLabel();
+        d30 = new javax.swing.JLabel();
+        d37 = new javax.swing.JLabel();
+        d18 = new javax.swing.JLabel();
+        d25 = new javax.swing.JLabel();
+        d32 = new javax.swing.JLabel();
+        d39 = new javax.swing.JLabel();
+        d17 = new javax.swing.JLabel();
+        d24 = new javax.swing.JLabel();
+        d31 = new javax.swing.JLabel();
+        d38 = new javax.swing.JLabel();
+        d19 = new javax.swing.JLabel();
+        d26 = new javax.swing.JLabel();
+        d33 = new javax.swing.JLabel();
+        d40 = new javax.swing.JLabel();
+        d20 = new javax.swing.JLabel();
+        d27 = new javax.swing.JLabel();
+        d34 = new javax.swing.JLabel();
+        d41 = new javax.swing.JLabel();
+        d7 = new javax.swing.JLabel();
+        d14 = new javax.swing.JLabel();
+        d21 = new javax.swing.JLabel();
+        d28 = new javax.swing.JLabel();
+        d35 = new javax.swing.JLabel();
+        d42 = new javax.swing.JLabel();
+        d8 = new javax.swing.JLabel();
+        d15 = new javax.swing.JLabel();
+        d22 = new javax.swing.JLabel();
+        d29 = new javax.swing.JLabel();
+        d36 = new javax.swing.JLabel();
+        SelecaoAno = new javax.swing.JComboBox<>();
         Sair = new javax.swing.JButton();
         jLabel54 = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
@@ -147,6 +200,362 @@ public class Principal extends javax.swing.JFrame {
 
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLayeredPane1.setFocusable(false);
+
+        jLayeredPane2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner1StateChanged(evt);
+            }
+        });
+
+        lSem1.setBackground(new java.awt.Color(102, 255, 102));
+        lSem1.setForeground(new java.awt.Color(204, 0, 0));
+        lSem1.setText("Dom");
+        lSem1.setToolTipText("");
+
+        lSem2.setText("Seg");
+
+        lSem4.setText("Qua");
+
+        lSem5.setText("Qui");
+
+        lSem6.setText("Sex");
+
+        lSem7.setText("Sab");
+
+        lSem3.setText("Ter");
+
+        SelecaoMes.setMaximumRowCount(12);
+        SelecaoMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
+        SelecaoMes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SelecaoMesActionPerformed(evt);
+            }
+        });
+
+        d1.setForeground(new java.awt.Color(204, 0, 0));
+        d1.setText("0");
+
+        d2.setText("0");
+
+        d3.setText("0");
+
+        d4.setText("0");
+
+        d5.setText("0");
+
+        d6.setText("0");
+
+        d9.setText("0");
+
+        d10.setText("0");
+
+        d11.setText("0");
+
+        d12.setText("0");
+
+        d13.setText("0");
+
+        d16.setText("0");
+
+        d23.setText("0");
+
+        d30.setText("0");
+
+        d37.setText("0");
+
+        d18.setText("0");
+
+        d25.setText("0");
+
+        d32.setText("0");
+
+        d39.setText("0");
+
+        d17.setText("0");
+
+        d24.setText("0");
+
+        d31.setText("0");
+
+        d38.setText("0");
+
+        d19.setText("0");
+
+        d26.setText("0");
+
+        d33.setText("0");
+
+        d40.setText("0");
+
+        d20.setText("0");
+
+        d27.setText("0");
+
+        d34.setText("0");
+
+        d41.setText("0");
+
+        d7.setText("0");
+
+        d14.setText("0");
+
+        d21.setText("0");
+
+        d28.setText("0");
+
+        d35.setText("0");
+
+        d42.setText("0");
+
+        d8.setForeground(new java.awt.Color(204, 0, 0));
+        d8.setText("0");
+
+        d15.setForeground(new java.awt.Color(204, 0, 0));
+        d15.setText("0");
+
+        d22.setForeground(new java.awt.Color(204, 0, 0));
+        d22.setText("0");
+
+        d29.setForeground(new java.awt.Color(204, 0, 0));
+        d29.setText("0");
+
+        d36.setForeground(new java.awt.Color(204, 0, 0));
+        d36.setText("0");
+
+        SelecaoAno.setEditable(true);
+        SelecaoAno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SelecaoAnoActionPerformed(evt);
+            }
+        });
+
+        jLayeredPane2.setLayer(jSpinner1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lSem3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(SelecaoMes, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d16, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d30, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d37, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d18, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d25, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d32, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d39, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d17, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d24, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d38, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d19, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d26, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d33, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d40, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d20, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d27, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d34, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d41, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d14, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d28, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d35, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d42, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d15, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d29, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(d36, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(SelecaoAno, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
+        jLayeredPane2.setLayout(jLayeredPane2Layout);
+        jLayeredPane2Layout.setHorizontalGroup(
+            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(lSem1))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d1))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d8))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d15))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d22))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d29))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(d36)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lSem2)
+                    .addComponent(d37)
+                    .addComponent(d30)
+                    .addComponent(d23)
+                    .addComponent(d16)
+                    .addComponent(d9)
+                    .addComponent(d2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lSem3))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(d10)
+                            .addComponent(d17)
+                            .addComponent(d24)
+                            .addComponent(d31)
+                            .addComponent(d38))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lSem4)
+                    .addComponent(d4)
+                    .addComponent(d11)
+                    .addComponent(d18)
+                    .addComponent(d25)
+                    .addComponent(d32)
+                    .addComponent(d39))
+                .addGap(18, 18, 18)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lSem5)
+                    .addComponent(d40, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d33, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d26, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d19, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d12, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(d5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addComponent(lSem6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lSem7))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(d41)
+                            .addComponent(d34)
+                            .addComponent(d27)
+                            .addComponent(d20)
+                            .addComponent(d13)
+                            .addComponent(d6))
+                        .addGap(37, 37, 37)
+                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(d7)
+                            .addComponent(d14)
+                            .addComponent(d21)
+                            .addComponent(d28)
+                            .addComponent(d35)
+                            .addComponent(d42))))
+                .addGap(0, 12, Short.MAX_VALUE))
+            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                .addComponent(SelecaoMes, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(SelecaoAno, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jLayeredPane2Layout.setVerticalGroup(
+            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelecaoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelecaoAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lSem1)
+                    .addComponent(lSem2)
+                    .addComponent(lSem3)
+                    .addComponent(lSem4)
+                    .addComponent(lSem5)
+                    .addComponent(lSem6)
+                    .addComponent(lSem7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d1)
+                    .addComponent(d2)
+                    .addComponent(d3)
+                    .addComponent(d4)
+                    .addComponent(d5)
+                    .addComponent(d6)
+                    .addComponent(d7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d9)
+                    .addComponent(d10)
+                    .addComponent(d11)
+                    .addComponent(d12)
+                    .addComponent(d13)
+                    .addComponent(d14)
+                    .addComponent(d8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d16)
+                    .addComponent(d18)
+                    .addComponent(d17)
+                    .addComponent(d19)
+                    .addComponent(d20)
+                    .addComponent(d21)
+                    .addComponent(d15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d23)
+                    .addComponent(d25)
+                    .addComponent(d24)
+                    .addComponent(d26)
+                    .addComponent(d27)
+                    .addComponent(d28)
+                    .addComponent(d22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d30)
+                    .addComponent(d32)
+                    .addComponent(d31)
+                    .addComponent(d33)
+                    .addComponent(d34)
+                    .addComponent(d35)
+                    .addComponent(d29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(d37)
+                    .addComponent(d39)
+                    .addComponent(d38)
+                    .addComponent(d40)
+                    .addComponent(d41)
+                    .addComponent(d42)
+                    .addComponent(d36)))
+        );
+
+        jLayeredPane1.add(jLayeredPane2);
+        jLayeredPane2.setBounds(130, 130, 290, 190);
 
         Sair.setBackground(new java.awt.Color(209, 178, 47));
         Sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Figuras/botx.jpg"))); // NOI18N
@@ -506,10 +915,10 @@ public class Principal extends javax.swing.JFrame {
         jLayeredPane1.add(jScrollPane30);
         jScrollPane30.setBounds(780, 420, 140, 19);
 
-        jCalendar1.setBackground(new java.awt.Color(102, 51, 0));
+        jCalendar1.setBackground(new java.awt.Color(204, 102, 0));
         jCalendar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLayeredPane1.add(jCalendar1);
-        jCalendar1.setBounds(110, 120, 330, 200);
+        jCalendar1.setBounds(130, 340, 290, 171);
 
         jLabel81.setText("19:30");
         jLayeredPane1.add(jLabel81);
@@ -624,6 +1033,49 @@ public class Principal extends javax.swing.JFrame {
         Sair.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
     }//GEN-LAST:event_SairMouseClicked
 
+    private void SelecaoAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelecaoAnoActionPerformed
+        try {
+            int x = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
+            //DiaVar = DiaFixo;
+            iniCalendario();
+            AnoSel.setText(SelecaoAno.getSelectedItem().toString());
+        } catch (Exception s) {
+            SelecaoAno.setSelectedItem(AnoFIXO);
+        }
+    }//GEN-LAST:event_SelecaoAnoActionPerformed
+
+    private void SelecaoMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelecaoMesActionPerformed
+        DiaVar = DiaFixo;
+        iniCalendario();
+    }//GEN-LAST:event_SelecaoMesActionPerformed
+
+    private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
+        valSel = Integer.parseInt(jSpinner1.getValue().toString());
+        int x =SelecaoMes.getSelectedIndex();
+        int ano = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
+
+        if(valSel == -1){
+            if(SelecaoMes.getSelectedIndex() != 11){
+                SelecaoMes.setSelectedIndex(x+1);
+            }else {
+                SelecaoMes.setSelectedIndex(0);
+                ano = ano +1;
+                SelecaoAno.setSelectedItem(ano);
+            }
+
+            if(valSel == 1){
+                if(SelecaoMes.getSelectedIndex() != 0){
+                    SelecaoMes.setSelectedIndex(x-1);
+                }else {
+                    SelecaoMes.setSelectedIndex(11);
+                    ano = ano -1;
+                    SelecaoAno.setSelectedItem(ano);
+                }
+            }
+        }
+        jSpinner1.setValue(0);
+    }//GEN-LAST:event_jSpinner1StateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -666,6 +1118,50 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel DiaSel;
     private javax.swing.JLabel DiaSel2;
     private javax.swing.JButton Sair;
+    private javax.swing.JComboBox<Integer> SelecaoAno;
+    private javax.swing.JComboBox<String> SelecaoMes;
+    private javax.swing.JLabel d1;
+    private javax.swing.JLabel d10;
+    private javax.swing.JLabel d11;
+    private javax.swing.JLabel d12;
+    private javax.swing.JLabel d13;
+    private javax.swing.JLabel d14;
+    private javax.swing.JLabel d15;
+    private javax.swing.JLabel d16;
+    private javax.swing.JLabel d17;
+    private javax.swing.JLabel d18;
+    private javax.swing.JLabel d19;
+    private javax.swing.JLabel d2;
+    private javax.swing.JLabel d20;
+    private javax.swing.JLabel d21;
+    private javax.swing.JLabel d22;
+    private javax.swing.JLabel d23;
+    private javax.swing.JLabel d24;
+    private javax.swing.JLabel d25;
+    private javax.swing.JLabel d26;
+    private javax.swing.JLabel d27;
+    private javax.swing.JLabel d28;
+    private javax.swing.JLabel d29;
+    private javax.swing.JLabel d3;
+    private javax.swing.JLabel d30;
+    private javax.swing.JLabel d31;
+    private javax.swing.JLabel d32;
+    private javax.swing.JLabel d33;
+    private javax.swing.JLabel d34;
+    private javax.swing.JLabel d35;
+    private javax.swing.JLabel d36;
+    private javax.swing.JLabel d37;
+    private javax.swing.JLabel d38;
+    private javax.swing.JLabel d39;
+    private javax.swing.JLabel d4;
+    private javax.swing.JLabel d40;
+    private javax.swing.JLabel d41;
+    private javax.swing.JLabel d42;
+    private javax.swing.JLabel d5;
+    private javax.swing.JLabel d6;
+    private javax.swing.JLabel d7;
+    private javax.swing.JLabel d8;
+    private javax.swing.JLabel d9;
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
@@ -700,6 +1196,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -730,6 +1227,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane10;
     private javax.swing.JTextPane jTextPane11;
@@ -760,467 +1258,474 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane7;
     private javax.swing.JTextPane jTextPane8;
     private javax.swing.JTextPane jTextPane9;
+    private javax.swing.JLabel lSem1;
+    private javax.swing.JLabel lSem2;
+    private javax.swing.JLabel lSem3;
+    private javax.swing.JLabel lSem4;
+    private javax.swing.JLabel lSem5;
+    private javax.swing.JLabel lSem6;
+    private javax.swing.JLabel lSem7;
     // End of variables declaration//GEN-END:variables
 
-////inicializa calendario
-//    public void iniCalendario() {
-//        SimpleDateFormat Ano = new SimpleDateFormat("yyyy");
-//        SimpleDateFormat Mes = new SimpleDateFormat("MM");
-//        SimpleDateFormat Dia = new SimpleDateFormat("dd");
-//
-//        AnoFIXO = Integer.parseInt(Ano.format(new Date()));
-//        MesFIXO = Integer.parseInt(Mes.format(new Date()));
-//        DiaFixo = Integer.parseInt(Dia.format(new Date()));
-//
-//        int AnoMaximo = AnoFIXO + 50;
-//        for (int i = 2010; i < AnoMaximo; i++) {
-//            SelecaoAno.addItem(i);
-//            SelecaoAno.setSelectedItem(AnoFIXO);
-//
-//            if (MesFIXO == 1) {
-//                SelecaoMes.setSelectedIndex(0);
-//            }
-//            if (MesFIXO == 2) {
-//                SelecaoMes.setSelectedIndex(1);
-//            }
-//            if (MesFIXO == 3) {
-//                SelecaoMes.setSelectedIndex(2);
-//            }
-//            if (MesFIXO == 4) {
-//                SelecaoMes.setSelectedIndex(3);
-//            }
-//            if (MesFIXO == 5) {
-//                SelecaoMes.setSelectedIndex(4);
-//            }
-//            if (MesFIXO == 6) {
-//                SelecaoMes.setSelectedIndex(5);
-//            }
-//            if (MesFIXO == 7) {
-//                SelecaoMes.setSelectedIndex(6);
-//            }
-//            if (MesFIXO == 8) {
-//                SelecaoMes.setSelectedIndex(7);
-//            }
-//            if (MesFIXO == 9) {
-//                SelecaoMes.setSelectedIndex(8);
-//            }
-//            if (MesFIXO == 10) {
-//                SelecaoMes.setSelectedIndex(9);
-//            }
-//            if (MesFIXO == 11) {
-//                SelecaoMes.setSelectedIndex(10);
-//            }
-//            if (MesFIXO == 12) {
-//                SelecaoMes.setSelectedIndex(11);
-//            }
-//        }
-//    }
-//
-//    public void setarDias() {
-//        d1.setText("");
-//        d2.setText("");
-//        d3.setText("");
-//        d4.setText("");
-//        d5.setText("");
-//        d6.setText("");
-//        d7.setText("");
-//        d8.setText("");
-//        d9.setText("");
-//        d10.setText("");
-//        d11.setText("");
-//        d12.setText("");
-//        d13.setText("");
-//        d14.setText("");
-//        d15.setText("");
-//        d16.setText("");
-//        d17.setText("");
-//        d18.setText("");
-//        d19.setText("");
-//        d20.setText("");
-//        d21.setText("");
-//        d22.setText("");
-//        d23.setText("");
-//        d24.setText("");
-//        d25.setText("");
-//        d26.setText("");
-//        d27.setText("");
-//        d28.setText("");
-//        d29.setText("");
-//        d30.setText("");
-//        d31.setText("");
-//        d32.setText("");
-//        d33.setText("");
-//        d34.setText("");
-//        d35.setText("");
-//        d36.setText("");
-//        d37.setText("");
-//        d38.setText("");
-//        d39.setText("");
-//        d40.setText("");
-//        d41.setText("");
-//        d42.setText("");
-//
-//        
-//        MesVar = SelecaoMes.getSelectedIndex();
-//        AnoVar = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
-//        DiaVar = DiaFixo;
-//        int TotalDiaMes = 0;
-//
-//        if (MesVar == 0) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 1) {
-//            int resultado = (AnoVar % 4);
-//            if (resultado == 0) {
-//                TotalDiaMes = 29;
-//            } else {
-//                TotalDiaMes = 28;
-//            }
-//        } else if (MesVar == 2) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 3) {
-//            TotalDiaMes = 30;
-//        } else if (MesVar == 4) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 5) {
-//            TotalDiaMes = 30;
-//        } else if (MesVar == 6) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 7) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 8) {
-//            TotalDiaMes = 30;
-//        } else if (MesVar == 9) {
-//            TotalDiaMes = 31;
-//        } else if (MesVar == 10) {
-//            TotalDiaMes = 30;
-//        } else if (MesVar == 11) {
-//            TotalDiaMes = 31;
-//        }
-//
-//        Calendar calendar = new Calendar() {
-//            @Override
-//            protected void computeTime() {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            protected void computeFields() {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void add(int field, int amount) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public void roll(int field, boolean up) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public int getMinimum(int field) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public int getMaximum(int field) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public int getGreatestMinimum(int field) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//
-//            @Override
-//            public int getLeastMaximum(int field) {
-//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//            }
-//        };
-//        calendar = Calendar.getInstance();
-//        calendar.set(AnoVar, MesVar, 1);
-//        int setaDia = 0;
-//
-//        int semana = calendar.get(Calendar.DAY_OF_WEEK);
-//        if (semana == Calendar.SUNDAY) {
-//            setaDia = 1;
-//        } else if (semana == Calendar.MONDAY) {
-//            setaDia = 2;
-//        } else if (semana == Calendar.TUESDAY) {
-//            setaDia = 3;
-//        } else if (semana == Calendar.WEDNESDAY) {
-//            setaDia = 4;
-//        } else if (semana == Calendar.THURSDAY) {
-//            setaDia = 5;
-//        } else if (semana == Calendar.FRIDAY) {
-//            setaDia = 6;
-//        } else if (semana == Calendar.SATURDAY) {
-//            setaDia = 7;
-//        }
-//
-//        for (int i = 1; i <= TotalDiaMes; i++) {
-//            switch (setaDia) {
-//                case 1:
-//                    d1.setText("" + i);
-//                    break;
-//                case 2:
-//                    d2.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d2.setForeground(Color.red);
-//                    } else {
-//                        d3.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 3:
-//                    d3.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d3.setForeground(Color.red);
-//                    } else {
-//                        d3.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 4:
-//                    d4.setText("" + i);
-//                    if (i == DiaFixo && MesVar == -1 && AnoVar == AnoFIXO) {
-//                        d4.setForeground(Color.red);
-//                    } else {
-//                        d4.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 5:
-//                    d5.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d5.setForeground(Color.red);
-//                    } else {
-//                        d5.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 6:
-//                    d6.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d6.setForeground(Color.red);
-//                    } else {
-//                        d6.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 7:
-//                    d7.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d7.setForeground(Color.red);
-//                    } else {
-//                        d7.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 8:
-//                    d8.setText("" + i);
-//                    break;
-//                case 9:
-//                    d9.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d9.setForeground(Color.red);
-//                    } else {
-//                        d9.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 10:
-//                    d10.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d10.setForeground(Color.red);
-//                    } else {
-//                        d10.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 11:
-//                    d11.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d11.setForeground(Color.red);
-//                    } else {
-//                        d11.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 12:
-//                    d12.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d12.setForeground(Color.red);
-//                    } else {
-//                        d12.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 13:
-//                    d13.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d13.setForeground(Color.red);
-//                    } else {
-//                        d13.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 14:
-//                    d14.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d14.setForeground(Color.red);
-//                    } else {
-//                        d14.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 15:
-//                    d15.setText("" + i);
-//                    break;
-//                case 16:
-//                    d16.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d16.setForeground(Color.red);
-//                    } else {
-//                        d16.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 17:
-//                    d17.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d17.setForeground(Color.red);
-//                    } else {
-//                        d17.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 18:
-//                    d18.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d18.setForeground(Color.red);
-//                    } else {
-//                        d18.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 19:
-//                    d19.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d19.setForeground(Color.red);
-//                    } else {
-//                        d19.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 20:
-//                    d20.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d20.setForeground(Color.red);
-//                    } else {
-//                        d20.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 21:
-//                    d21.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d21.setForeground(Color.red);
-//                    } else {
-//                        d21.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 22:
-//                    d22.setText("" + i);
-//                    break;
-//                case 23:
-//                    d23.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d23.setForeground(Color.red);
-//                    } else {
-//                        d23.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 24:
-//                    d24.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d24.setForeground(Color.red);
-//                    } else {
-//                        d24.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 25:
-//                    d25.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d25.setForeground(Color.red);
-//                    } else {
-//                        d25.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 26:
-//                    d26.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d26.setForeground(Color.red);
-//                    } else {
-//                        d26.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 27:
-//                    d27.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d27.setForeground(Color.red);
-//                    } else {
-//                        d27.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 28:
-//                    d28.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d28.setForeground(Color.red);
-//                    } else {
-//                        d28.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 29:
-//                    d29.setText("" + i);
-//                    break;
-//                case 30:
-//                    d30.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d30.setForeground(Color.red);
-//                    } else {
-//                        d30.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 31:
-//                    d31.setText("" + i);
-//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-//                        d31.setForeground(Color.red);
-//                    } else {
-//                        d31.setForeground(Color.black);
-//                    }
-//                    break;
-//                case 32:
-//                    d32.setText("" + i);
-//                    break;
-//                case 33:
-//                    d33.setText("" + i);
-//                    break;
-//                case 34:
-//                    d34.setText("" + i);
-//                    break;
-//                case 35:
-//                    d35.setText("" + i);
-//                    break;
-//                case 36:
-//                    d24.setText("" + i);
-//                    break;
-//                case 37:
-//                    d37.setText("" + i);
-//                    break;
-//                case 38:
-//                    d38.setText("" + i);
-//                    break;
-//                case 39:
-//                    d39.setText("" + i);
-//                    break;
-//                case 40:
-//                    d40.setText("" + i);
-//                    break;
-//                case 41:
-//                    d41.setText("" + i);
-//                    break;
-//                case 42:
-//                    d42.setText("" + i);
-//                    break;
-//            }
-//            setaDia++;
-//        }
-//
-//    }
+//inicializa calendario
+    public void iniCalendario() {
+        SimpleDateFormat Ano = new SimpleDateFormat("yyyy");
+        SimpleDateFormat Mes = new SimpleDateFormat("MM");
+        SimpleDateFormat Dia = new SimpleDateFormat("dd");
+
+        AnoFIXO = Integer.parseInt(Ano.format(new Date()));
+        MesFIXO = Integer.parseInt(Mes.format(new Date()));
+        DiaFixo = Integer.parseInt(Dia.format(new Date()));
+
+        int AnoMaximo = AnoFIXO + 50;
+        for (int i = 2010; i < AnoMaximo; i++) {
+            SelecaoAno.addItem(i);
+            SelecaoAno.setSelectedItem(AnoFIXO);
+
+            if (MesFIXO == 1) {
+                SelecaoMes.setSelectedIndex(0);
+            }
+            if (MesFIXO == 2) {
+                SelecaoMes.setSelectedIndex(1);
+            }
+            if (MesFIXO == 3) {
+                SelecaoMes.setSelectedIndex(2);
+            }
+            if (MesFIXO == 4) {
+                SelecaoMes.setSelectedIndex(3);
+            }
+            if (MesFIXO == 5) {
+                SelecaoMes.setSelectedIndex(4);
+            }
+            if (MesFIXO == 6) {
+                SelecaoMes.setSelectedIndex(5);
+            }
+            if (MesFIXO == 7) {
+                SelecaoMes.setSelectedIndex(6);
+            }
+            if (MesFIXO == 8) {
+                SelecaoMes.setSelectedIndex(7);
+            }
+            if (MesFIXO == 9) {
+                SelecaoMes.setSelectedIndex(8);
+            }
+            if (MesFIXO == 10) {
+                SelecaoMes.setSelectedIndex(9);
+            }
+            if (MesFIXO == 11) {
+                SelecaoMes.setSelectedIndex(10);
+            }
+            if (MesFIXO == 12) {
+                SelecaoMes.setSelectedIndex(11);
+            }
+        }
+    }
+
+    public void setarDias() {
+        d1.setText("");
+        d2.setText("");
+        d3.setText("");
+        d4.setText("");
+        d5.setText("");
+        d6.setText("");
+        d7.setText("");
+        d8.setText("");
+        d9.setText("");
+        d10.setText("");
+        d11.setText("");
+        d12.setText("");
+        d13.setText("");
+        d14.setText("");
+        d15.setText("");
+        d16.setText("");
+        d17.setText("");
+        d18.setText("");
+        d19.setText("");
+        d20.setText("");
+        d21.setText("");
+        d22.setText("");
+        d23.setText("");
+        d24.setText("");
+        d25.setText("");
+        d26.setText("");
+        d27.setText("");
+        d28.setText("");
+        d29.setText("");
+        d30.setText("");
+        d31.setText("");
+        d32.setText("");
+        d33.setText("");
+        d34.setText("");
+        d35.setText("");
+        d36.setText("");
+        d37.setText("");
+        d38.setText("");
+        d39.setText("");
+        d40.setText("");
+        d41.setText("");
+        d42.setText("");
+
+        
+        MesVar = SelecaoMes.getSelectedIndex();
+        AnoVar = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
+        DiaVar = DiaFixo;
+        int TotalDiaMes = 0;
+
+        if (MesVar == 0) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 1) {
+            int resultado = (AnoVar % 4);
+            if (resultado == 0) {
+                TotalDiaMes = 29;
+            } else {
+                TotalDiaMes = 28;
+            }
+        } else if (MesVar == 2) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 3) {
+            TotalDiaMes = 30;
+        } else if (MesVar == 4) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 5) {
+            TotalDiaMes = 30;
+        } else if (MesVar == 6) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 7) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 8) {
+            TotalDiaMes = 30;
+        } else if (MesVar == 9) {
+            TotalDiaMes = 31;
+        } else if (MesVar == 10) {
+            TotalDiaMes = 30;
+        } else if (MesVar == 11) {
+            TotalDiaMes = 31;
+        }
+
+        Calendar calendar = new Calendar() {
+            @Override
+            protected void computeTime() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            protected void computeFields() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void add(int field, int amount) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void roll(int field, boolean up) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getMinimum(int field) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getMaximum(int field) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getGreatestMinimum(int field) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public int getLeastMaximum(int field) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        calendar = Calendar.getInstance();
+        calendar.set(AnoVar, MesVar, 1);
+        int setaDia = 0;
+
+        int semana = calendar.get(Calendar.DAY_OF_WEEK);
+        if (semana == Calendar.SUNDAY) {
+            setaDia = 1;
+        } else if (semana == Calendar.MONDAY) {
+            setaDia = 2;
+        } else if (semana == Calendar.TUESDAY) {
+            setaDia = 3;
+        } else if (semana == Calendar.WEDNESDAY) {
+            setaDia = 4;
+        } else if (semana == Calendar.THURSDAY) {
+            setaDia = 5;
+        } else if (semana == Calendar.FRIDAY) {
+            setaDia = 6;
+        } else if (semana == Calendar.SATURDAY) {
+            setaDia = 7;
+        }
+
+        for (int i = 1; i <= TotalDiaMes; i++) {
+            switch (setaDia) {
+                case 1:
+                    d1.setText("" + i);
+                    break;
+                case 2:
+                    d2.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d2.setForeground(Color.red);
+                    } else {
+                        d3.setForeground(Color.black);
+                    }
+                    break;
+                case 3:
+                    d3.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d3.setForeground(Color.red);
+                    } else {
+                        d3.setForeground(Color.black);
+                    }
+                    break;
+                case 4:
+                    d4.setText("" + i);
+                    if (i == DiaFixo && MesVar == -1 && AnoVar == AnoFIXO) {
+                        d4.setForeground(Color.red);
+                    } else {
+                        d4.setForeground(Color.black);
+                    }
+                    break;
+                case 5:
+                    d5.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d5.setForeground(Color.red);
+                    } else {
+                        d5.setForeground(Color.black);
+                    }
+                    break;
+                case 6:
+                    d6.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d6.setForeground(Color.red);
+                    } else {
+                        d6.setForeground(Color.black);
+                    }
+                    break;
+                case 7:
+                    d7.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d7.setForeground(Color.red);
+                    } else {
+                        d7.setForeground(Color.black);
+                    }
+                    break;
+                case 8:
+                    d8.setText("" + i);
+                    break;
+                case 9:
+                    d9.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d9.setForeground(Color.red);
+                    } else {
+                        d9.setForeground(Color.black);
+                    }
+                    break;
+                case 10:
+                    d10.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d10.setForeground(Color.red);
+                    } else {
+                        d10.setForeground(Color.black);
+                    }
+                    break;
+                case 11:
+                    d11.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d11.setForeground(Color.red);
+                    } else {
+                        d11.setForeground(Color.black);
+                    }
+                    break;
+                case 12:
+                    d12.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d12.setForeground(Color.red);
+                    } else {
+                        d12.setForeground(Color.black);
+                    }
+                    break;
+                case 13:
+                    d13.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d13.setForeground(Color.red);
+                    } else {
+                        d13.setForeground(Color.black);
+                    }
+                    break;
+                case 14:
+                    d14.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d14.setForeground(Color.red);
+                    } else {
+                        d14.setForeground(Color.black);
+                    }
+                    break;
+                case 15:
+                    d15.setText("" + i);
+                    break;
+                case 16:
+                    d16.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d16.setForeground(Color.red);
+                    } else {
+                        d16.setForeground(Color.black);
+                    }
+                    break;
+                case 17:
+                    d17.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d17.setForeground(Color.red);
+                    } else {
+                        d17.setForeground(Color.black);
+                    }
+                    break;
+                case 18:
+                    d18.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d18.setForeground(Color.red);
+                    } else {
+                        d18.setForeground(Color.black);
+                    }
+                    break;
+                case 19:
+                    d19.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d19.setForeground(Color.red);
+                    } else {
+                        d19.setForeground(Color.black);
+                    }
+                    break;
+                case 20:
+                    d20.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d20.setForeground(Color.red);
+                    } else {
+                        d20.setForeground(Color.black);
+                    }
+                    break;
+                case 21:
+                    d21.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d21.setForeground(Color.red);
+                    } else {
+                        d21.setForeground(Color.black);
+                    }
+                    break;
+                case 22:
+                    d22.setText("" + i);
+                    break;
+                case 23:
+                    d23.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d23.setForeground(Color.red);
+                    } else {
+                        d23.setForeground(Color.black);
+                    }
+                    break;
+                case 24:
+                    d24.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d24.setForeground(Color.red);
+                    } else {
+                        d24.setForeground(Color.black);
+                    }
+                    break;
+                case 25:
+                    d25.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d25.setForeground(Color.red);
+                    } else {
+                        d25.setForeground(Color.black);
+                    }
+                    break;
+                case 26:
+                    d26.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d26.setForeground(Color.red);
+                    } else {
+                        d26.setForeground(Color.black);
+                    }
+                    break;
+                case 27:
+                    d27.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d27.setForeground(Color.red);
+                    } else {
+                        d27.setForeground(Color.black);
+                    }
+                    break;
+                case 28:
+                    d28.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d28.setForeground(Color.red);
+                    } else {
+                        d28.setForeground(Color.black);
+                    }
+                    break;
+                case 29:
+                    d29.setText("" + i);
+                    break;
+                case 30:
+                    d30.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d30.setForeground(Color.red);
+                    } else {
+                        d30.setForeground(Color.black);
+                    }
+                    break;
+                case 31:
+                    d31.setText("" + i);
+                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+                        d31.setForeground(Color.red);
+                    } else {
+                        d31.setForeground(Color.black);
+                    }
+                    break;
+                case 32:
+                    d32.setText("" + i);
+                    break;
+                case 33:
+                    d33.setText("" + i);
+                    break;
+                case 34:
+                    d34.setText("" + i);
+                    break;
+                case 35:
+                    d35.setText("" + i);
+                    break;
+                case 36:
+                    d24.setText("" + i);
+                    break;
+                case 37:
+                    d37.setText("" + i);
+                    break;
+                case 38:
+                    d38.setText("" + i);
+                    break;
+                case 39:
+                    d39.setText("" + i);
+                    break;
+                case 40:
+                    d40.setText("" + i);
+                    break;
+                case 41:
+                    d41.setText("" + i);
+                    break;
+                case 42:
+                    d42.setText("" + i);
+                    break;
+            }
+            setaDia++;
+        }
+
+    }
 
 }
