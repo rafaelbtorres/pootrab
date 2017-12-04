@@ -28,8 +28,8 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         setSize(998, 770);
         this.setLocationRelativeTo(null);
-        iniCalendario();
-        setarDias();
+//        iniCalendario();
+//        setarDias();
 
     }
 
@@ -762,465 +762,465 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
 
-//inicializa calendario
-    public void iniCalendario() {
-        SimpleDateFormat Ano = new SimpleDateFormat("yyyy");
-        SimpleDateFormat Mes = new SimpleDateFormat("MM");
-        SimpleDateFormat Dia = new SimpleDateFormat("dd");
-
-        AnoFIXO = Integer.parseInt(Ano.format(new Date()));
-        MesFIXO = Integer.parseInt(Mes.format(new Date()));
-        DiaFixo = Integer.parseInt(Dia.format(new Date()));
-
-        int AnoMaximo = AnoFIXO + 50;
-        for (int i = 2010; i < AnoMaximo; i++) {
-            SelecaoAno.addItem(i);
-            SelecaoAno.setSelectedItem(AnoFIXO);
-
-            if (MesFIXO == 1) {
-                SelecaoMes.setSelectedIndex(0);
-            }
-            if (MesFIXO == 2) {
-                SelecaoMes.setSelectedIndex(1);
-            }
-            if (MesFIXO == 3) {
-                SelecaoMes.setSelectedIndex(2);
-            }
-            if (MesFIXO == 4) {
-                SelecaoMes.setSelectedIndex(3);
-            }
-            if (MesFIXO == 5) {
-                SelecaoMes.setSelectedIndex(4);
-            }
-            if (MesFIXO == 6) {
-                SelecaoMes.setSelectedIndex(5);
-            }
-            if (MesFIXO == 7) {
-                SelecaoMes.setSelectedIndex(6);
-            }
-            if (MesFIXO == 8) {
-                SelecaoMes.setSelectedIndex(7);
-            }
-            if (MesFIXO == 9) {
-                SelecaoMes.setSelectedIndex(8);
-            }
-            if (MesFIXO == 10) {
-                SelecaoMes.setSelectedIndex(9);
-            }
-            if (MesFIXO == 11) {
-                SelecaoMes.setSelectedIndex(10);
-            }
-            if (MesFIXO == 12) {
-                SelecaoMes.setSelectedIndex(11);
-            }
-        }
-    }
-
-    public void setarDias() {
-        d1.setText("");
-        d2.setText("");
-        d3.setText("");
-        d4.setText("");
-        d5.setText("");
-        d6.setText("");
-        d7.setText("");
-        d8.setText("");
-        d9.setText("");
-        d10.setText("");
-        d11.setText("");
-        d12.setText("");
-        d13.setText("");
-        d14.setText("");
-        d15.setText("");
-        d16.setText("");
-        d17.setText("");
-        d18.setText("");
-        d19.setText("");
-        d20.setText("");
-        d21.setText("");
-        d22.setText("");
-        d23.setText("");
-        d24.setText("");
-        d25.setText("");
-        d26.setText("");
-        d27.setText("");
-        d28.setText("");
-        d29.setText("");
-        d30.setText("");
-        d31.setText("");
-        d32.setText("");
-        d33.setText("");
-        d34.setText("");
-        d35.setText("");
-        d36.setText("");
-        d37.setText("");
-        d38.setText("");
-        d39.setText("");
-        d40.setText("");
-        d41.setText("");
-        d42.setText("");
-
-        
-        MesVar = SelecaoMes.getSelectedIndex();
-        AnoVar = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
-        DiaVar = DiaFixo;
-        int TotalDiaMes = 0;
-
-        if (MesVar == 0) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 1) {
-            int resultado = (AnoVar % 4);
-            if (resultado == 0) {
-                TotalDiaMes = 29;
-            } else {
-                TotalDiaMes = 28;
-            }
-        } else if (MesVar == 2) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 3) {
-            TotalDiaMes = 30;
-        } else if (MesVar == 4) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 5) {
-            TotalDiaMes = 30;
-        } else if (MesVar == 6) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 7) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 8) {
-            TotalDiaMes = 30;
-        } else if (MesVar == 9) {
-            TotalDiaMes = 31;
-        } else if (MesVar == 10) {
-            TotalDiaMes = 30;
-        } else if (MesVar == 11) {
-            TotalDiaMes = 31;
-        }
-
-        Calendar calendar = new Calendar() {
-            @Override
-            protected void computeTime() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            protected void computeFields() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void add(int field, int amount) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void roll(int field, boolean up) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public int getMinimum(int field) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public int getMaximum(int field) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public int getGreatestMinimum(int field) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public int getLeastMaximum(int field) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
-        calendar = Calendar.getInstance();
-        calendar.set(AnoVar, MesVar, 1);
-        int setaDia = 0;
-
-        int semana = calendar.get(Calendar.DAY_OF_WEEK);
-        if (semana == Calendar.SUNDAY) {
-            setaDia = 1;
-        } else if (semana == Calendar.MONDAY) {
-            setaDia = 2;
-        } else if (semana == Calendar.TUESDAY) {
-            setaDia = 3;
-        } else if (semana == Calendar.WEDNESDAY) {
-            setaDia = 4;
-        } else if (semana == Calendar.THURSDAY) {
-            setaDia = 5;
-        } else if (semana == Calendar.FRIDAY) {
-            setaDia = 6;
-        } else if (semana == Calendar.SATURDAY) {
-            setaDia = 7;
-        }
-
-        for (int i = 1; i <= TotalDiaMes; i++) {
-            switch (setaDia) {
-                case 1:
-                    d1.setText("" + i);
-                    break;
-                case 2:
-                    d2.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d2.setForeground(Color.red);
-                    } else {
-                        d3.setForeground(Color.black);
-                    }
-                    break;
-                case 3:
-                    d3.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d3.setForeground(Color.red);
-                    } else {
-                        d3.setForeground(Color.black);
-                    }
-                    break;
-                case 4:
-                    d4.setText("" + i);
-                    if (i == DiaFixo && MesVar == -1 && AnoVar == AnoFIXO) {
-                        d4.setForeground(Color.red);
-                    } else {
-                        d4.setForeground(Color.black);
-                    }
-                    break;
-                case 5:
-                    d5.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d5.setForeground(Color.red);
-                    } else {
-                        d5.setForeground(Color.black);
-                    }
-                    break;
-                case 6:
-                    d6.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d6.setForeground(Color.red);
-                    } else {
-                        d6.setForeground(Color.black);
-                    }
-                    break;
-                case 7:
-                    d7.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d7.setForeground(Color.red);
-                    } else {
-                        d7.setForeground(Color.black);
-                    }
-                    break;
-                case 8:
-                    d8.setText("" + i);
-                    break;
-                case 9:
-                    d9.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d9.setForeground(Color.red);
-                    } else {
-                        d9.setForeground(Color.black);
-                    }
-                    break;
-                case 10:
-                    d10.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d10.setForeground(Color.red);
-                    } else {
-                        d10.setForeground(Color.black);
-                    }
-                    break;
-                case 11:
-                    d11.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d11.setForeground(Color.red);
-                    } else {
-                        d11.setForeground(Color.black);
-                    }
-                    break;
-                case 12:
-                    d12.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d12.setForeground(Color.red);
-                    } else {
-                        d12.setForeground(Color.black);
-                    }
-                    break;
-                case 13:
-                    d13.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d13.setForeground(Color.red);
-                    } else {
-                        d13.setForeground(Color.black);
-                    }
-                    break;
-                case 14:
-                    d14.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d14.setForeground(Color.red);
-                    } else {
-                        d14.setForeground(Color.black);
-                    }
-                    break;
-                case 15:
-                    d15.setText("" + i);
-                    break;
-                case 16:
-                    d16.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d16.setForeground(Color.red);
-                    } else {
-                        d16.setForeground(Color.black);
-                    }
-                    break;
-                case 17:
-                    d17.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d17.setForeground(Color.red);
-                    } else {
-                        d17.setForeground(Color.black);
-                    }
-                    break;
-                case 18:
-                    d18.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d18.setForeground(Color.red);
-                    } else {
-                        d18.setForeground(Color.black);
-                    }
-                    break;
-                case 19:
-                    d19.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d19.setForeground(Color.red);
-                    } else {
-                        d19.setForeground(Color.black);
-                    }
-                    break;
-                case 20:
-                    d20.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d20.setForeground(Color.red);
-                    } else {
-                        d20.setForeground(Color.black);
-                    }
-                    break;
-                case 21:
-                    d21.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d21.setForeground(Color.red);
-                    } else {
-                        d21.setForeground(Color.black);
-                    }
-                    break;
-                case 22:
-                    d22.setText("" + i);
-                    break;
-                case 23:
-                    d23.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d23.setForeground(Color.red);
-                    } else {
-                        d23.setForeground(Color.black);
-                    }
-                    break;
-                case 24:
-                    d24.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d24.setForeground(Color.red);
-                    } else {
-                        d24.setForeground(Color.black);
-                    }
-                    break;
-                case 25:
-                    d25.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d25.setForeground(Color.red);
-                    } else {
-                        d25.setForeground(Color.black);
-                    }
-                    break;
-                case 26:
-                    d26.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d26.setForeground(Color.red);
-                    } else {
-                        d26.setForeground(Color.black);
-                    }
-                    break;
-                case 27:
-                    d27.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d27.setForeground(Color.red);
-                    } else {
-                        d27.setForeground(Color.black);
-                    }
-                    break;
-                case 28:
-                    d28.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d28.setForeground(Color.red);
-                    } else {
-                        d28.setForeground(Color.black);
-                    }
-                    break;
-                case 29:
-                    d29.setText("" + i);
-                    break;
-                case 30:
-                    d30.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d30.setForeground(Color.red);
-                    } else {
-                        d30.setForeground(Color.black);
-                    }
-                    break;
-                case 31:
-                    d31.setText("" + i);
-                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
-                        d31.setForeground(Color.red);
-                    } else {
-                        d31.setForeground(Color.black);
-                    }
-                    break;
-                case 32:
-                    d32.setText("" + i);
-                    break;
-                case 33:
-                    d33.setText("" + i);
-                    break;
-                case 34:
-                    d34.setText("" + i);
-                    break;
-                case 35:
-                    d35.setText("" + i);
-                    break;
-                case 36:
-                    d24.setText("" + i);
-                    break;
-                case 37:
-                    d37.setText("" + i);
-                    break;
-                case 38:
-                    d38.setText("" + i);
-                    break;
-                case 39:
-                    d39.setText("" + i);
-                    break;
-                case 40:
-                    d40.setText("" + i);
-                    break;
-                case 41:
-                    d41.setText("" + i);
-                    break;
-                case 42:
-                    d42.setText("" + i);
-                    break;
-            }
-            setaDia++;
-        }
-
-    }
+////inicializa calendario
+//    public void iniCalendario() {
+//        SimpleDateFormat Ano = new SimpleDateFormat("yyyy");
+//        SimpleDateFormat Mes = new SimpleDateFormat("MM");
+//        SimpleDateFormat Dia = new SimpleDateFormat("dd");
+//
+//        AnoFIXO = Integer.parseInt(Ano.format(new Date()));
+//        MesFIXO = Integer.parseInt(Mes.format(new Date()));
+//        DiaFixo = Integer.parseInt(Dia.format(new Date()));
+//
+//        int AnoMaximo = AnoFIXO + 50;
+//        for (int i = 2010; i < AnoMaximo; i++) {
+//            SelecaoAno.addItem(i);
+//            SelecaoAno.setSelectedItem(AnoFIXO);
+//
+//            if (MesFIXO == 1) {
+//                SelecaoMes.setSelectedIndex(0);
+//            }
+//            if (MesFIXO == 2) {
+//                SelecaoMes.setSelectedIndex(1);
+//            }
+//            if (MesFIXO == 3) {
+//                SelecaoMes.setSelectedIndex(2);
+//            }
+//            if (MesFIXO == 4) {
+//                SelecaoMes.setSelectedIndex(3);
+//            }
+//            if (MesFIXO == 5) {
+//                SelecaoMes.setSelectedIndex(4);
+//            }
+//            if (MesFIXO == 6) {
+//                SelecaoMes.setSelectedIndex(5);
+//            }
+//            if (MesFIXO == 7) {
+//                SelecaoMes.setSelectedIndex(6);
+//            }
+//            if (MesFIXO == 8) {
+//                SelecaoMes.setSelectedIndex(7);
+//            }
+//            if (MesFIXO == 9) {
+//                SelecaoMes.setSelectedIndex(8);
+//            }
+//            if (MesFIXO == 10) {
+//                SelecaoMes.setSelectedIndex(9);
+//            }
+//            if (MesFIXO == 11) {
+//                SelecaoMes.setSelectedIndex(10);
+//            }
+//            if (MesFIXO == 12) {
+//                SelecaoMes.setSelectedIndex(11);
+//            }
+//        }
+//    }
+//
+//    public void setarDias() {
+//        d1.setText("");
+//        d2.setText("");
+//        d3.setText("");
+//        d4.setText("");
+//        d5.setText("");
+//        d6.setText("");
+//        d7.setText("");
+//        d8.setText("");
+//        d9.setText("");
+//        d10.setText("");
+//        d11.setText("");
+//        d12.setText("");
+//        d13.setText("");
+//        d14.setText("");
+//        d15.setText("");
+//        d16.setText("");
+//        d17.setText("");
+//        d18.setText("");
+//        d19.setText("");
+//        d20.setText("");
+//        d21.setText("");
+//        d22.setText("");
+//        d23.setText("");
+//        d24.setText("");
+//        d25.setText("");
+//        d26.setText("");
+//        d27.setText("");
+//        d28.setText("");
+//        d29.setText("");
+//        d30.setText("");
+//        d31.setText("");
+//        d32.setText("");
+//        d33.setText("");
+//        d34.setText("");
+//        d35.setText("");
+//        d36.setText("");
+//        d37.setText("");
+//        d38.setText("");
+//        d39.setText("");
+//        d40.setText("");
+//        d41.setText("");
+//        d42.setText("");
+//
+//        
+//        MesVar = SelecaoMes.getSelectedIndex();
+//        AnoVar = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
+//        DiaVar = DiaFixo;
+//        int TotalDiaMes = 0;
+//
+//        if (MesVar == 0) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 1) {
+//            int resultado = (AnoVar % 4);
+//            if (resultado == 0) {
+//                TotalDiaMes = 29;
+//            } else {
+//                TotalDiaMes = 28;
+//            }
+//        } else if (MesVar == 2) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 3) {
+//            TotalDiaMes = 30;
+//        } else if (MesVar == 4) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 5) {
+//            TotalDiaMes = 30;
+//        } else if (MesVar == 6) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 7) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 8) {
+//            TotalDiaMes = 30;
+//        } else if (MesVar == 9) {
+//            TotalDiaMes = 31;
+//        } else if (MesVar == 10) {
+//            TotalDiaMes = 30;
+//        } else if (MesVar == 11) {
+//            TotalDiaMes = 31;
+//        }
+//
+//        Calendar calendar = new Calendar() {
+//            @Override
+//            protected void computeTime() {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            protected void computeFields() {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public void add(int field, int amount) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public void roll(int field, boolean up) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public int getMinimum(int field) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public int getMaximum(int field) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public int getGreatestMinimum(int field) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//
+//            @Override
+//            public int getLeastMaximum(int field) {
+//                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//            }
+//        };
+//        calendar = Calendar.getInstance();
+//        calendar.set(AnoVar, MesVar, 1);
+//        int setaDia = 0;
+//
+//        int semana = calendar.get(Calendar.DAY_OF_WEEK);
+//        if (semana == Calendar.SUNDAY) {
+//            setaDia = 1;
+//        } else if (semana == Calendar.MONDAY) {
+//            setaDia = 2;
+//        } else if (semana == Calendar.TUESDAY) {
+//            setaDia = 3;
+//        } else if (semana == Calendar.WEDNESDAY) {
+//            setaDia = 4;
+//        } else if (semana == Calendar.THURSDAY) {
+//            setaDia = 5;
+//        } else if (semana == Calendar.FRIDAY) {
+//            setaDia = 6;
+//        } else if (semana == Calendar.SATURDAY) {
+//            setaDia = 7;
+//        }
+//
+//        for (int i = 1; i <= TotalDiaMes; i++) {
+//            switch (setaDia) {
+//                case 1:
+//                    d1.setText("" + i);
+//                    break;
+//                case 2:
+//                    d2.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d2.setForeground(Color.red);
+//                    } else {
+//                        d3.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 3:
+//                    d3.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d3.setForeground(Color.red);
+//                    } else {
+//                        d3.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 4:
+//                    d4.setText("" + i);
+//                    if (i == DiaFixo && MesVar == -1 && AnoVar == AnoFIXO) {
+//                        d4.setForeground(Color.red);
+//                    } else {
+//                        d4.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 5:
+//                    d5.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d5.setForeground(Color.red);
+//                    } else {
+//                        d5.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 6:
+//                    d6.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d6.setForeground(Color.red);
+//                    } else {
+//                        d6.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 7:
+//                    d7.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d7.setForeground(Color.red);
+//                    } else {
+//                        d7.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 8:
+//                    d8.setText("" + i);
+//                    break;
+//                case 9:
+//                    d9.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d9.setForeground(Color.red);
+//                    } else {
+//                        d9.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 10:
+//                    d10.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d10.setForeground(Color.red);
+//                    } else {
+//                        d10.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 11:
+//                    d11.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d11.setForeground(Color.red);
+//                    } else {
+//                        d11.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 12:
+//                    d12.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d12.setForeground(Color.red);
+//                    } else {
+//                        d12.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 13:
+//                    d13.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d13.setForeground(Color.red);
+//                    } else {
+//                        d13.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 14:
+//                    d14.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d14.setForeground(Color.red);
+//                    } else {
+//                        d14.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 15:
+//                    d15.setText("" + i);
+//                    break;
+//                case 16:
+//                    d16.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d16.setForeground(Color.red);
+//                    } else {
+//                        d16.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 17:
+//                    d17.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d17.setForeground(Color.red);
+//                    } else {
+//                        d17.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 18:
+//                    d18.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d18.setForeground(Color.red);
+//                    } else {
+//                        d18.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 19:
+//                    d19.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d19.setForeground(Color.red);
+//                    } else {
+//                        d19.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 20:
+//                    d20.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d20.setForeground(Color.red);
+//                    } else {
+//                        d20.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 21:
+//                    d21.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d21.setForeground(Color.red);
+//                    } else {
+//                        d21.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 22:
+//                    d22.setText("" + i);
+//                    break;
+//                case 23:
+//                    d23.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d23.setForeground(Color.red);
+//                    } else {
+//                        d23.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 24:
+//                    d24.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d24.setForeground(Color.red);
+//                    } else {
+//                        d24.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 25:
+//                    d25.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d25.setForeground(Color.red);
+//                    } else {
+//                        d25.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 26:
+//                    d26.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d26.setForeground(Color.red);
+//                    } else {
+//                        d26.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 27:
+//                    d27.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d27.setForeground(Color.red);
+//                    } else {
+//                        d27.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 28:
+//                    d28.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d28.setForeground(Color.red);
+//                    } else {
+//                        d28.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 29:
+//                    d29.setText("" + i);
+//                    break;
+//                case 30:
+//                    d30.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d30.setForeground(Color.red);
+//                    } else {
+//                        d30.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 31:
+//                    d31.setText("" + i);
+//                    if (i == DiaFixo & MesVar == -1 & AnoVar == AnoFIXO) {
+//                        d31.setForeground(Color.red);
+//                    } else {
+//                        d31.setForeground(Color.black);
+//                    }
+//                    break;
+//                case 32:
+//                    d32.setText("" + i);
+//                    break;
+//                case 33:
+//                    d33.setText("" + i);
+//                    break;
+//                case 34:
+//                    d34.setText("" + i);
+//                    break;
+//                case 35:
+//                    d35.setText("" + i);
+//                    break;
+//                case 36:
+//                    d24.setText("" + i);
+//                    break;
+//                case 37:
+//                    d37.setText("" + i);
+//                    break;
+//                case 38:
+//                    d38.setText("" + i);
+//                    break;
+//                case 39:
+//                    d39.setText("" + i);
+//                    break;
+//                case 40:
+//                    d40.setText("" + i);
+//                    break;
+//                case 41:
+//                    d41.setText("" + i);
+//                    break;
+//                case 42:
+//                    d42.setText("" + i);
+//                    break;
+//            }
+//            setaDia++;
+//        }
+//
+//    }
 
 }
