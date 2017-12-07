@@ -1,5 +1,6 @@
 package Menus;
 
+import Aula.Aulas;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,31 +12,44 @@ public class Adicionar {
 
     public boolean adicionarDisciplina() {
         Scanner e = new Scanner(System.in);
-        String nome = null, professor = null, curso = null, semestre = null, turma = null, notificacao = null, aula = null, minutos = null;
+        int minutos;
         System.out.println("Digite o nome da Disciplina que deseja adicionar: ");
-        nome = ValidarEntradaUsuario.nextLine(nome);
+        String nome = e.next();
         System.out.println("Digite o nome do Professor que ministra essa disciplina: ");
-        professor = ValidarEntradaUsuario.nextLine(professor);
+        String professor = e.next();
         System.out.println("Digite o nome do curso dessa disciplina: ");
-        curso = ValidarEntradaUsuario.nextLine(curso);
+        String curso = e.next();
         System.out.println("Digite o semestre que será cursado esta disciplina: ");
-        semestre = ValidarEntradaUsuario.nextInt(semestre);
+        String semestre = e.next();
         System.out.println("Digite em qual turma que será cursado esta disciplina: ");
-        turma = ValidarEntradaUsuario.nextLine(turma);
+        int turma = e.nextInt();
         System.out.println("Deseja receber uma notificação?\n1- SIM   2- NAO");
         int resp = e.nextInt();
         switch (resp) {
             case 1:
                 do {
                     System.out.println("Digite quantos minutos antes da aula deseja ser avisado: ");
-                    minutos = ValidarEntradaUsuario.nextInt(minutos);
-                }while(!minutos.equalsIgnoreCase("0") && minutos.equalsIgnoreCase("200"));
+                    minutos = e.nextInt();
+                }while(minutos>=0 && minutos<=200);
                 
                 break;
 
         }
 
         return false;
+    }
+    
+    public boolean adicionarAula(){
+        Scanner e = new Scanner(System.in);
+        System.out.println("Digite o horario da aula: ");
+        int hora = e.nextInt();
+        System.out.println("Digite o dia da aula: ");
+        int dia =  e.nextInt();
+        System.out.println("Digite o horario que deseja ser notificado: ");
+        int noti = e.nextInt();
+        Aulas aula = new Aulas(hora, dia, noti);
+        aula.addAula(aula);
+        return false;     
     }
 
 }
