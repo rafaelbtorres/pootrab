@@ -1,5 +1,6 @@
 package Disciplinas;
 
+import Aula.Aulas;
 import java.util.List;
 
 /**
@@ -13,9 +14,19 @@ public class Disciplina implements IDisciplinas {
     private String curso;
     private String semestre;
     private String turma;
-    private String notificacao;
-    private List aulas;
+    private int notificacao;
+    private Aulas aulas[];
 
+    public Disciplina(String nome, String professor, String curso, String semestre, String turma, int minutos) {
+        this.nome = nome;
+        this.professor = professor;
+        this.curso = curso;
+        this.semestre = semestre;
+        this.turma = turma;
+        this.notificacao = notificacao; 
+    }
+  
+   
     /**
      * @return the nome
      */
@@ -86,47 +97,21 @@ public class Disciplina implements IDisciplinas {
         this.turma = turma;
     }
 
-    /**
-     * @return the notificacao
-     */
-    public String getNotificacao() {
-        return notificacao;
-    }
-
-    /**
-     * @param notificacao the notificacao to set
-     */
-    public void setNotificacao(String notificacao) {
-        this.notificacao = notificacao;
-    }
-
-    /**
+     /**
      * @return the aulas
      */
-    public List getAulas() {
-        return aulas;
+    public String getAulas() {
+        return aulas.toString();
     }
 
     /**
      * @param aulas the aulas to set
      */
     public void setAulas(List aulas) {
-        this.aulas = aulas;
+        this.setAulas(aulas);
     }
 
-    //METODOS
-    @Override
-    public void adicionarDisc(String nome, String professor, String curso, String semestre, String turma, String notificacao, List aula) {
-        this.nome = nome;
-        this.professor = professor;
-        this.curso = curso;
-        this.semestre = semestre;
-        this.turma = turma;
-        this.notificacao = notificacao;
-        this.aulas = aula;
-    }
-
-    @Override
+       @Override
     public boolean excluirDisc() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -139,6 +124,13 @@ public class Disciplina implements IDisciplinas {
     @Override
     public boolean editarDisc() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /**
+     * @param aulas the aulas to set
+     */
+    public void setAulas(Aulas[] aulas) {
+        this.aulas = aulas;
     }
 
 }

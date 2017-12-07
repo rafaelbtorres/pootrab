@@ -17,7 +17,7 @@ public class MenuInicio {
                 ad.adicionarDisciplina();
             case "2":
                 Adicionar ada = new Adicionar();
-                ada.adicionarDisciplina();
+                ada.adicionarAula();
             case "3":
                 Adicionar add = new Adicionar();
                 add.adicionarDisciplina();
